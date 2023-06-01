@@ -1,0 +1,99 @@
+  return (
+    <View style={styles.container}>
+      <View style={styles.navbar}>
+        <Text style={styles.navbarTitle}>Admin Panel</Text>
+        <Button title="Add Users" onPress={() => handleFormChange('users')} />
+        <Button title="Add Missions" onPress={() => handleFormChange('missions')} />
+        <Button title="Stock" onPress={() => handleFormChange('stock')} />
+        <Button title="Logout" onPress={handleLogout} />
+      </View>
+      <View style={styles.content}>
+        {activeForm === 'users' && (
+          <View>
+            <Text style={styles.heading}>Add Users</Text>
+            {
+              <View style={styles.container}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Username"
+                  value={formData.username}
+                  onChangeText={(value) => handleChange('username', value)}
+                />
+                <TextInput
+                  style={styles.input}
+                  placeholder="Email"
+                  value={formData.email}
+                  onChangeText={(value) => handleChange('email', value)}
+                />
+                <TextInput
+                  style={styles.input}
+                  placeholder="Password"
+                  value={formData.password}
+                  onChangeText={(value) => handleChange('password', value)}
+                  secureTextEntry
+                />
+                <TextInput
+                  style={styles.input}
+                  placeholder="role"
+                  value={formData.role}
+                  onChangeText={(value) => handleChange('role', value)}
+                />
+                <Button title="Submit" onPress={handleSubmit} />
+              </View>
+            }
+          </View>
+        )}
+        {activeForm === 'missions' && (
+          <View>
+            <Text style={styles.heading}>Add Missions</Text>
+            {
+              <View style={styles.container}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="The Required Role"
+                  value={dataForm.role}
+                  onChangeText={(value) => handleMissionChange('role', value)}
+                />
+                <TextInput
+                  style={styles.input}
+                  placeholder="Mission"
+                  value={dataForm.mission}
+                  onChangeText={(value) => handleMissionChange('mission', value)}
+                />
+                <Button title="Add" onPress={handleMissions} />
+              </View>
+            }
+          </View>
+        )}
+        {activeForm === 'stock' && (
+          <View>
+            <Text style={styles.heading}>Stock</Text>
+            <View style={styles.container}>
+              <TextInput
+                style={styles.input}
+                placeholder="Item Name"
+                value={stockData.itemName}
+                onChangeText={(value) => handleStockChange('itemName', value)}
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Quantity"
+                value={stockData.quantity}
+                onChangeText={(value) => handleStockChange('quantity', value)}
+                keyboardType="numeric"
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Price"
+                value={stockData.price}
+                onChangeText={(value) => handleStockChange('price', value)}
+                keyboardType="numeric"
+              />
+              <Button title="Add" onPress={handleStock} />
+            </View>
+          </View>
+        )}
+      </View>
+    </View>
+  );
+};
