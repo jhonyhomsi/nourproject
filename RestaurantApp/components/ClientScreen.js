@@ -10,7 +10,7 @@ const ClientScreen = ({ navigation }) => {
 
   const fetchMenu = async () => {
     try {
-      const response = await fetch('http://192.168.1.7:5000/menu');
+      const response = await fetch('http://192.168.1.117:5000/menu');
       const menu = await response.json();
       setMenuItems(menu);
     } catch (error) {
@@ -39,7 +39,7 @@ const ClientScreen = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.menuContainer}>
         {menuItems.map((item, index) => (
           <View key={index} style={styles.menuItem}>
-            <Image source={{ uri: `http://192.168.1.7:5000/${item.photo}` }} style={styles.image} />
+            <Image source={{ uri: `http://192.168.1.117:5000/${item.photo}` }} style={styles.image} />
             <Text style={styles.itemName}>{item.name}</Text>
             <Text style={styles.itemPrice}>{item.price}</Text>
             <Text style={styles.itemDescription}>{item.description}</Text>

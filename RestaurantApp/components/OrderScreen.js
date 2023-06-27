@@ -13,7 +13,7 @@ const OrderForm = ({ route, navigation }) => {
 
   const checkProductAvailability = async () => {
     try {
-      const response = await fetch(`http://192.168.1.7:5000/stock`, {
+      const response = await fetch(`http://192.168.1.117:5000/stock`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const OrderForm = ({ route, navigation }) => {
   const handleOrder = async () => {
     try {
       // Send the order data to the server
-      const response = await fetch('http://192.168.1.7:5000/orders', {
+      const response = await fetch('http://192.168.1.117:5000/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

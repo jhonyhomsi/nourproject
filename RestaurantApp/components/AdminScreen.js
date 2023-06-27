@@ -26,7 +26,7 @@ const AdminScreen = ({ navigation }) => {
 
   const fetchStockData = async () => {
     try {
-      const response = await fetch('http://192.168.1.7:5000/stocks');
+      const response = await fetch('http://192.168.1.117:5000/stocks');
       if (response.ok) {
         const data = await response.json();
         setDataStock(data);
@@ -34,13 +34,14 @@ const AdminScreen = ({ navigation }) => {
         console.error('Failed to fetch stock data');
       }
     } catch (error) {
+      //ERROR DETECTING
       console.error('Failed to connect to server:', error);
     }
   };
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://192.168.1.7:5000/AddUser', {
+      const response = await fetch('http://192.168.1.117:5000/AddUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +64,7 @@ const AdminScreen = ({ navigation }) => {
     try {
       const missionData = { ...dataForm, enumeration: 'Your Enumeration Value' };
 
-      const response = await fetch('http://192.168.1.7:5000/AddMissions', {
+      const response = await fetch('http://192.168.1.117:5000/AddMissions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,7 +92,7 @@ const AdminScreen = ({ navigation }) => {
         return;
       }
 
-      const response = await fetch('http://192.168.1.7:5000/AddStock', {
+      const response = await fetch('http://192.168.1.117:5000/AddStock', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -142,7 +143,7 @@ const AdminScreen = ({ navigation }) => {
   useEffect(() => {
     const fetchStockData = async () => {
       try {
-        const response = await fetch('http://192.168.1.7:5000/stocks');
+        const response = await fetch('http://192.168.1.117:5000/stocks');
         const data = await response.json();
         setDataStock(data);
       } catch (error) {
