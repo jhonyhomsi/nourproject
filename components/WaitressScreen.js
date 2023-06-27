@@ -7,7 +7,7 @@ const WaitressScreen = ({ navigation }) => {
   useEffect(() => {
     const fetchMissions = async () => {
       try {
-        const response = await fetch('http://192.168.1.7:5000/missions');
+        const response = await fetch('https://nourapp.onrender.com/missions');
         if (response.ok) {
           const data = await response.json();
           console.log('Response data:', data);
@@ -25,7 +25,7 @@ const WaitressScreen = ({ navigation }) => {
   
   const handleMissionDone = async (missionNumber) => {
     try {
-      const response = await fetch(`http://192.168.1.7:5000/missions/${missionNumber}/confirm`, {
+      const response = await fetch(`https://nourapp.onrender.com/missions/${missionNumber}/confirm`, {
         method: 'DELETE', // Use DELETE method instead of POST
       });
   

@@ -10,7 +10,7 @@ const FinishedOrders = () => {
 
   const fetchFinishedOrders = async () => {
     try {
-      const response = await fetch('http://192.168.1.7:5000/orders?status=true'); // Replace with your server URL
+      const response = await fetch('https://nourapp.onrender.com/orders?status=true'); // Replace with your server URL
       const ordersData = await response.json();
       console.log(ordersData);
       setFinishedOrders(ordersData);
@@ -21,7 +21,7 @@ const FinishedOrders = () => {
 
   const handleDeleteOrder = async (orderNumber) => {
     try {
-      await fetch(`http://192.168.1.7:5000/delorders?orderNumber=${orderNumber}`, {
+      await fetch(`https://nourapp.onrender.com/delorders?orderNumber=${orderNumber}`, {
         method: 'DELETE',
       });
       // Remove the deleted order from the state

@@ -26,7 +26,7 @@ const AdminScreen = ({ navigation }) => {
 
   const fetchStockData = async () => {
     try {
-      const response = await fetch('http://192.168.1.117:5000/stocks');
+      const response = await fetch('https://nourapp.onrender.com/stocks');
       if (response.ok) {
         const data = await response.json();
         setDataStock(data);
@@ -41,7 +41,7 @@ const AdminScreen = ({ navigation }) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://192.168.1.117:5000/AddUser', {
+      const response = await fetch('https://nourapp.onrender.com/AddUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const AdminScreen = ({ navigation }) => {
     try {
       const missionData = { ...dataForm, enumeration: 'Your Enumeration Value' };
 
-      const response = await fetch('http://192.168.1.117:5000/AddMissions', {
+      const response = await fetch('https://nourapp.onrender.com/AddMissions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ const AdminScreen = ({ navigation }) => {
         return;
       }
 
-      const response = await fetch('http://192.168.1.117:5000/AddStock', {
+      const response = await fetch('https://nourapp.onrender.com/AddStock', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ const AdminScreen = ({ navigation }) => {
   useEffect(() => {
     const fetchStockData = async () => {
       try {
-        const response = await fetch('http://192.168.1.117:5000/stocks');
+        const response = await fetch('https://nourapp.onrender.com/stocks');
         const data = await response.json();
         setDataStock(data);
       } catch (error) {

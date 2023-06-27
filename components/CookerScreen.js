@@ -10,7 +10,7 @@ const CookerScreen = ({ navigation }) => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://192.168.1.7:5000/orders'); // Replace with your server URL
+      const response = await fetch('https://nourapp.onrender.com/orders'); // Replace with your server URL
       const ordersData = await response.json();
       setOrders(ordersData);
     } catch (error) {
@@ -33,7 +33,7 @@ const CookerScreen = ({ navigation }) => {
     } else {
       const orderNumber = order.orderNumber;
       // Update the order status on the server
-      fetch(`http://192.168.1.7:5000/orders/${order._id}`, {
+      fetch(`https://nourapp.onrender.com/orders/${order._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
