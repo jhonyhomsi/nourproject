@@ -186,6 +186,12 @@ const AdminScreen = ({ navigation }) => {
               value={formData.password}
               onChangeText={(text) => handleChange('password', text)}
             />
+            <TextInput
+              style={styles.input}
+              placeholder='Role'
+              value={formData.role}
+              onChangeText={(text) => handleChange('role', text)}
+            />  
             <Button title="Submit" onPress={handleSubmit} />
           </View>
         )}
