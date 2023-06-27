@@ -2,20 +2,17 @@ module.exports = function(api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
+    transformer: {
+      babelTransformerPath: require.resolve("react-native-svg-transformer"),
+      getTransformOptions: async () => ({
+        transform: {
+          experimentalImportSupport: false,
+          inlineRequires: false,
+        },
+        babelOptions: {
+          plugins: ["@babel/plugin-transform-export-namespace-from"],
+        },
+      }),
+    },
   };
-};
-
-module.exports = {
-  transformer: {
-    babelTransformerPath: require.resolve("react-native-svg-transformer"),
-    getTransformOptions: async () => ({
-      transform: {
-        experimentalImportSupport: false,
-        inlineRequires: false,
-      },
-      babelOptions: {
-        plugins: ["@babel/plugin-transform-export-namespace-from"],
-      },
-    }),
-  },
 };
