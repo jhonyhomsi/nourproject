@@ -44,7 +44,7 @@ const AdminScreen = ({ navigation }) => {
       const response = await fetch('https://nourapp.onrender.com/AddUser', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+        'Content-Type': 'application/json',zz
         },
         body: JSON.stringify(formData),
       });
