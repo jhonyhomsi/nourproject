@@ -4,3 +4,18 @@ module.exports = function(api) {
     presets: ['babel-preset-expo'],
   };
 };
+
+module.exports = {
+  transformer: {
+    babelTransformerPath: require.resolve("react-native-svg-transformer"),
+    getTransformOptions: async () => ({
+      transform: {
+        experimentalImportSupport: false,
+        inlineRequires: false,
+      },
+      babelOptions: {
+        plugins: ["@babel/plugin-transform-export-namespace-from"],
+      },
+    }),
+  },
+};
