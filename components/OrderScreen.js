@@ -42,6 +42,7 @@ const OrderForm = ({ route, navigation }) => {
           tableNumber,
           itemName: item.name,
           juiceName,
+          totalPrice,
         }),
       });
 
