@@ -29,15 +29,15 @@ const menuProxy = createProxyMiddleware({
 });
 
 // Set up the proxy middleware
-app.use('/checkLoginStatus', checkLoginStatusProxy);
-app.use('/menu', menuProxy);
+//app.use('/checkLoginStatus', checkLoginStatusProxy);
+//app.use('/menu', menuProxy);
 
 // Enable CORS for all routes
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://nourwebapptest.onrender.com');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
+//app.use((req, res, next) => {
+//  res.header('Access-Control-Allow-Origin', 'https://nourwebapptest.onrender.com');
+//  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//  next();
+//});
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://jhony-33:Serafim12@cluster0.v4dsgzx.mongodb.net/ReactApp', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -135,11 +135,11 @@ app.use(express.json());
 // Define the "Order" model
 const Order = mongoose.model('Order', orderSchema);
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://192.168.56.1:3000');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  next();
-});
+//app.use((req, res, next) => {
+//  res.setHeader('Access-Control-Allow-Origin', 'http://192.168.56.1:3000');
+//  res.setHeader('Access-Control-Allow-Credentials', 'true');
+//  next();
+//});
 
 app.post('/Stafflogin', async (req, res, next) => {
   const { username, password } = req.body;
@@ -404,12 +404,12 @@ app.get('/juicemenu', (req, res, next) => {
   res.json(juices);
 });
 
-app.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://nourwebapptest.onrender.com');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
+//app.use(function(req, res, next) {
+//  res.setHeader('Access-Control-Allow-Origin', 'https://nourwebapptest.onrender.com');
+//  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+//  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+//  next();
+//});
 
 app.get('/menu', (req, res, next) => {
   const menu = [
