@@ -443,6 +443,42 @@ app.get('/menu', (req, res, next) => {
       photo: 'https://photos-g0s1.onrender.com/photo/sushi.jpeg',
       description: 'Assorted sushi rolls with fresh fish, avocado, and cucumber. Served with soy sauce and wasabi.',
     },
+    { 
+      name: 'Stake',
+      price: '$22',
+      photo: 'https://photos-g0s1.onrender.com/photo/stake.jpeg',
+      description: 'Fine grilled stake with fresh salad, lettus, and tomato and Lemmon.',
+    },
+    { 
+      name: 'Chicken Burger',
+      price: '$9',
+      photo: 'https://photos-g0s1.onrender.com/photo/chicken.jpeg',
+      description: 'Chicken Burger, Containes tomato, Lettus, Cucumber, and pikles. Served with potato Chips and juice.',
+    },
+    { 
+      name: 'Tawouk',
+      price: '$8.95',
+      photo: 'https://photos-g0s1.onrender.com/photo/tawouk.jpeg',
+      description: 'Grilled tawouk On sticks, Tomato, and cucumber. Served with soy sauce and Pepsi small.',
+    },    
+    { 
+      name: 'Pancacke',
+      price: '$8',
+      photo: 'https://photos-g0s1.onrender.com/photo/pancake.jpeg',
+      description: 'An Original Recepie for A Hand made pancake, butter. Served with sauce.',
+    },
+    { 
+      name: 'Makaronie',
+      price: '$7.25',
+      photo: 'https://photos-g0s1.onrender.com/photo/makaronie.jpeg',
+      description: 'A Simple and a traditional Makaronie PLate, made by the best Italian chefs.',
+    },
+    { 
+      name: 'Eggs',
+      price: '$3.54',
+      photo: 'https://photos-g0s1.onrender.com/photo/eggs.jpeg',
+      description: 'A Simple and smooth egg plate breakfist made with love',
+    },
   ];
   
   res.json(menu);
