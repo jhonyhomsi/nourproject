@@ -464,7 +464,7 @@ app.get('/menu', (req, res, next) => {
     { 
       name: 'Pancacke',
       price: '$8',
-      photo: 'https://photos-g0s1.onrender.com/photo/pancake.png',
+      photo: 'https://photos-g0s1.onrender.com/photo/pancake.jpeg',
       description: 'An Original Recepie for A Hand made pancake, butter. Served with sauce.',
     },
     { 
@@ -476,7 +476,7 @@ app.get('/menu', (req, res, next) => {
     { 
       name: 'Eggs',
       price: '$3.54',
-      photo: 'https://photos-g0s1.onrender.com/photo/eggs.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/eggs.png',
       description: 'A Simple and smooth egg plate breakfist made with love',
     },
   ];
