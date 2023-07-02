@@ -458,13 +458,13 @@ app.get('/menu', (req, res, next) => {
     { 
       name: 'Tawouk',
       price: '$8.95',
-      photo: 'https://photos-g0s1.onrender.com/photo/tawouk.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/tawouk.jpg',
       description: 'Grilled tawouk On sticks, Tomato, and cucumber. Served with soy sauce and Pepsi small.',
     },    
     { 
       name: 'Pancacke',
       price: '$8',
-      photo: 'https://photos-g0s1.onrender.com/photo/pancake.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/pancake.png',
       description: 'An Original Recepie for A Hand made pancake, butter. Served with sauce.',
     },
     { 
