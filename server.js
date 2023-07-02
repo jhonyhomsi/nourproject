@@ -416,31 +416,31 @@ app.get('/menu', (req, res, next) => {
     { 
       name: 'Burger',
       price: '$10',
-      photo: 'burger.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/burger.jpeg',
       description: 'A juicy beef patty topped with cheese, lettuce, and tomatoes. Served with fries.',
     },
     { 
       name: 'Pizza',
       price: '$12',
-      photo: 'pizza.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/pizza.jpeg',
       description: 'A classic combination of marinara sauce, cheese, and assorted toppings on a thin crust.',
     },
     { 
       name: 'Salad',
       price: '$8',
-      photo: 'salad.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/salad.jpeg',
       description: 'Fresh mixed greens, cherry tomatoes, cucumber, and feta cheese. Served with a tangy vinaigrette.',
     },
     { 
       name: 'Pasta',
       price: '$14',
-      photo: 'pasta.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/pasta.jpeg',
       description: 'Al dente pasta tossed in a rich tomato sauce, sprinkled with Parmesan cheese and fresh basil.',
     },
     { 
       name: 'Sushi',
       price: '$16',
-      photo: 'sushi.jpeg',
+      photo: 'https://photos-g0s1.onrender.com/photo/sushi.jpeg',
       description: 'Assorted sushi rolls with fresh fish, avocado, and cucumber. Served with soy sauce and wasabi.',
     },
   ];
