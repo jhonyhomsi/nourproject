@@ -173,24 +173,26 @@ app.post('/Stafflogin', async (req, res, next) => {
   }
 });
   
-  // Client Login route
 app.post('/Clientlogin', async (req, res, next) => {
   const { username, password } = req.body;
   console.log(username);
 
   try {
-    // Find the user in the database
-    const Client = await Clients.findOne({ username });
+    // Find the user in the Clients collection
+    let Client = await Clients.findOne({ username });
 
-    // If the user doesn't exist, return an error
+    // If the user is not found in Clients collection, check OtherCollection
+    if (!Client) {
+      Client = await User.findOne({ username });
+    }
+
+    // If the user doesn't exist in either collection, return an error
     if (!Client) {
       return res.status(404).json({ error: 'User not found' });
     }
 
     // Compare the provided password with the stored password
     if (password === Client.password) {
-      //console.log("true");
-      //console.log(user.role);
       return res.json({ username: Client.username });
     }
     return res.status(401).json({ error: 'Invalid password' });
